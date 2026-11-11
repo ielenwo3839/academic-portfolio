@@ -1,8 +1,8 @@
 # Academic Portfolio & Student Management Platform
 
-A multi-page personal portfolio for Ifeanyi Elenwo, built with only **HTML, CSS and JavaScript** — no frameworks, libraries or other languages.
+A multi-page personal portfolio for Kelvin Sydney, built with only **HTML, CSS and JavaScript** — no frameworks, libraries or other languages.
 
-**Live site:** `https://ks-profile.netlify.app`
+**Live site:** `https://i-elenwo.netlify.app`
 
 ## Pages
 
