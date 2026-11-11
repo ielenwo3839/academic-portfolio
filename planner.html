@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Academic planner — add, complete and delete study tasks.">
+  <title>Academic Planner | Ifeanyi Elenwo</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">IE</span> Ifeanyi Elenwo</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu"><span></span></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-banner">
+      <div class="container">
+        <span class="eyebrow">Academic planner</span>
+        <h1>Stay on top of your tasks</h1>
+        <p class="lead">Add tasks with a due date and priority, tick them off as you finish, and delete what you no longer need. Your tasks are saved in this browser.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="planner-title">
+      <div class="container planner">
+        <h2 id="planner-title" class="visually-hidden">Task planner</h2>
+
+        <!-- Add-task form and progress -->
+        <aside class="card">
+          <h3>Add a task</h3>
+          <form id="task-form" novalidate>
+            <div class="form-row">
+              <label for="task-title">Task title</label>
+              <input type="text" id="task-title" name="title" placeholder="e.g. Write project report" maxlength="100" autocomplete="off">
+              <span class="field-error" id="task-error" aria-live="polite"></span>
+            </div>
+            <div class="form-row">
+              <label for="task-subject">Course / subject</label>
+              <input type="text" id="task-subject" name="subject" placeholder="e.g. Web Development" maxlength="40" autocomplete="off">
+            </div>
+            <div class="form-row-inline">
+              <div class="form-row">
+                <label for="task-due">Due date</label>
+                <input type="date" id="task-due" name="due">
+              </div>
+              <div class="form-row">
+                <label for="task-priority">Priority</label>
+                <select id="task-priority" name="priority">
+                  <option value="high">High</option>
+                  <option value="medium" selected>Medium</option>
+                  <option value="low">Low</option>
+                </select>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-block" type="submit">+ Add task</button>
+          </form>
+
+          <div class="progress-wrap">
+            <div class="progress-text"><strong>Overall progress</strong><span id="progress-percent">0%</span></div>
+            <div class="progress" role="progressbar" aria-label="Tasks completed" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="progress-bar"></span></div>
+          </div>
+          <dl class="planner-stats">
+            <div><dt>Total</dt><dd id="stat-total">0</dd></div>
+            <div><dt>Pending</dt><dd id="stat-pending">0</dd></div>
+            <div><dt>Done</dt><dd id="stat-done">0</dd></div>
+            <div><dt>Overdue</dt><dd id="stat-overdue">0</dd></div>
+          </dl>
+        </aside>
+
+        <!-- Task list -->
+        <div>
+          <div class="task-toolbar">
+            <div class="filter-bar" role="group" aria-label="Filter tasks">
+              <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All</button>
+              <button class="filter-btn" type="button" data-filter="active" aria-pressed="false">Pending</button>
+              <button class="filter-btn" type="button" data-filter="completed" aria-pressed="false">Completed</button>
+            </div>
+            <div class="toolbar-controls">
+              <label class="visually-hidden" for="task-search">Search tasks</label>
+              <input class="task-search" type="search" id="task-search" placeholder="Search tasks…">
+              <label class="visually-hidden" for="task-sort">Sort tasks</label>
+              <select id="task-sort">
+                <option value="due">Sort: Due date</option>
+                <option value="priority">Sort: Priority</option>
+                <option value="newest">Sort: Newest</option>
+              </select>
+            </div>
+          </div>
+
+          <ul class="task-list" id="task-list" aria-live="polite"></ul>
+          <p class="empty-state" id="empty-state" hidden>No tasks yet — add your first one using the form.</p>
+
+          <div class="list-footer">
+            <button class="btn btn-outline btn-sm" type="button" id="clear-completed">Clear completed</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <section>
+          <h3>Ifeanyi Elenwo</h3>
+          <p>Also known as Kelvin Sydney. Software Engineer (Full-Stack / AI &amp; Automation). B.Eng Computer Engineering, University of Uyo.</p>
+        </section>
+        <nav aria-label="Footer navigation">
+          <h3>Pages</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html">Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <section>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/kelvin-sydney" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="mailto:kelenwo68@gmail.com">kelenwo68@gmail.com</a></li>
+            <li><a href="tel:+2348161718348">+234 816 171 8348</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> Ifeanyi Elenwo. All rights reserved.</p>
+        <p>Built with HTML, CSS &amp; JavaScript.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" type="button" aria-label="Back to top">&uarr;</button>
+  <script src="js/main.js"></script>
+  <script src="js/planner.js"></script>
+</body>
+</html>

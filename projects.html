@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projects by Ifeanyi Elenwo — web, mobile, automation and accessibility work.">
+  <title>Projects | Ifeanyi Elenwo</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">IE</span> Ifeanyi Elenwo</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu"><span></span></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-banner">
+      <div class="container">
+        <span class="eyebrow">Projects</span>
+        <h1>Things I've built</h1>
+        <p class="lead">Selected work from my roles so far. Filter by category, or open a project to see what it does and the technologies involved.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 id="projects-title" class="visually-hidden">Project list</h2>
+
+        <div class="filter-bar" role="group" aria-label="Filter projects by category">
+          <button class="filter-btn active" type="button" data-category="all" aria-pressed="true">All</button>
+          <button class="filter-btn" type="button" data-category="web" aria-pressed="false">Web</button>
+          <button class="filter-btn" type="button" data-category="mobile" aria-pressed="false">Mobile</button>
+          <button class="filter-btn" type="button" data-category="automation" aria-pressed="false">AI &amp; Automation</button>
+          <button class="filter-btn" type="button" data-category="accessibility" aria-pressed="false">Accessibility</button>
+        </div>
+        <p id="project-count" class="lead" aria-live="polite"></p>
+
+        <div class="grid-2">
+          <article class="card project-card reveal" data-category="automation">
+            <figure class="project-thumb">
+              <img src="images/ocr-step3-prescription.png" alt="Screenshot of the prescription step, where customers enter their PD and upload a prescription file" width="1851" height="902" loading="lazy">
+            </figure>
+            <div class="project-body">
+              <ul class="tag-list">
+                <li class="tag">OCR</li><li class="tag">Data extraction</li><li class="tag">Verification</li>
+              </ul>
+              <h3>OCR Prescription Verification Pipeline</h3>
+              <p>Processes uploaded prescription documents, extracts structured prescription data, validates the results and supports automated verification workflows.</p>
+              <div class="project-links">
+                <button class="btn btn-primary btn-sm" type="button" data-details="ocr">Details</button>
+                <a class="btn btn-outline btn-sm" href="contact.html?project=OCR%20Prescription%20Verification%20Pipeline">Ask about this project</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card reveal" data-category="web">
+            <figure class="project-thumb">
+              <img src="images/apparel-step2-upload-art.png" alt="Screenshot of the design studio with a logo placed on the front pocket print area of a safety vest" width="1867" height="934" loading="lazy">
+            </figure>
+            <div class="project-body">
+              <ul class="tag-list">
+                <li class="tag">Product design</li><li class="tag">E-commerce</li>
+              </ul>
+              <h3>Apparel Customization Studio</h3>
+              <p>An interactive studio for designing apparel: place artwork on configurable print areas, choose product variants, save designs and order online.</p>
+              <div class="project-links">
+                <button class="btn btn-primary btn-sm" type="button" data-details="apparel">Details</button>
+                <a class="btn btn-outline btn-sm" href="contact.html?project=Apparel%20Customization%20Studio">Ask about this project</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card reveal" data-category="web automation">
+            <figure class="project-thumb">
+              <img src="images/project-shopify.svg" alt="Illustration of an order and redemption code verification dashboard" width="800" height="500" loading="lazy">
+            </figure>
+            <div class="project-body">
+              <ul class="tag-list">
+                <li class="tag">Shopify GraphQL</li><li class="tag">Webhooks</li>
+              </ul>
+              <h3>Shopify Verification &amp; Redemption</h3>
+              <p>Infrastructure that validates orders and redemption codes through backend services, webhooks and Shopify GraphQL APIs.</p>
+              <div class="project-links">
+                <button class="btn btn-primary btn-sm" type="button" data-details="shopify">Details</button>
+                <a class="btn btn-outline btn-sm" href="contact.html?project=Shopify%20Verification%20%26%20Redemption">Ask about this project</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card reveal" data-category="mobile accessibility">
+            <figure class="project-thumb">
+              <img src="images/project-fitness.svg" alt="Illustration of a fitness app on two phones with font size and voice guidance controls" width="800" height="500" loading="lazy">
+            </figure>
+            <div class="project-body">
+              <ul class="tag-list">
+                <li class="tag">React Native</li><li class="tag">Node.js</li><li class="tag">Accessibility</li>
+              </ul>
+              <h3>Accessible Fitness App</h3>
+              <p>A cross-platform Android and iOS fitness app with screen reader support, voice guidance, adjustable font sizes and inclusive navigation.</p>
+              <div class="project-links">
+                <button class="btn btn-primary btn-sm" type="button" data-details="fitness">Details</button>
+                <a class="btn btn-outline btn-sm" href="contact.html?project=Accessible%20Fitness%20App">Ask about this project</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card reveal" data-category="web accessibility">
+            <figure class="project-thumb">
+              <img src="images/project-audit.svg" alt="Illustration of an accessibility audit dashboard with a score and a list of issues" width="800" height="500" loading="lazy">
+            </figure>
+            <div class="project-body">
+              <ul class="tag-list">
+                <li class="tag">Axe-core</li><li class="tag">Sitemorse</li><li class="tag">Jira API</li>
+              </ul>
+              <h3>Accessibility Audit Platform</h3>
+              <p>A platform for running automated and manual accessibility audits, with accessible dashboards, reporting and Jira issue tracking.</p>
+              <div class="project-links">
+                <button class="btn btn-primary btn-sm" type="button" data-details="audit">Details</button>
+                <a class="btn btn-outline btn-sm" href="contact.html?project=Accessibility%20Audit%20Platform">Ask about this project</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card reveal" data-category="web">
+            <figure class="project-thumb">
+              <img src="images/project-payments.svg" alt="Illustration of a student dues payment form with Paystack and Remita options" width="800" height="500" loading="lazy">
+            </figure>
+            <div class="project-body">
+              <ul class="tag-list">
+                <li class="tag">PHP</li><li class="tag">JavaScript</li><li class="tag">Paystack</li><li class="tag">Remita</li>
+              </ul>
+              <h3>Student Dues Payment Platform</h3>
+              <p>An online platform for paying students' dues at the University of Uyo, processing payments through the Remita and Paystack APIs.</p>
+              <div class="project-links">
+                <button class="btn btn-primary btn-sm" type="button" data-details="payments">Details</button>
+                <a class="btn btn-outline btn-sm" href="contact.html?project=Student%20Dues%20Payment%20Platform">Ask about this project</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Summary table of projects -->
+    <section class="section section--tint" aria-labelledby="summary-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">At a glance</span>
+          <h2 id="summary-title">Project summary</h2>
+        </div>
+        <div class="table-wrap reveal">
+          <table>
+            <caption>Projects with the organisation and period they belong to</caption>
+            <thead>
+              <tr>
+                <th scope="col">Project</th>
+                <th scope="col">Organisation</th>
+                <th scope="col">Period</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>OCR Prescription Verification Pipeline</td><td>Axum Technologies</td><td>2022 – Present</td></tr>
+              <tr><td>Apparel Customization Studio</td><td>Axum Technologies</td><td>2022 – Present</td></tr>
+              <tr><td>Shopify Verification &amp; Redemption</td><td>Axum Technologies</td><td>2022 – Present</td></tr>
+              <tr><td>Accessible Fitness App</td><td>SekondSkinSociety</td><td>2024</td></tr>
+              <tr><td>Accessibility Audit Platform</td><td>CurbcutOS</td><td>2023</td></tr>
+              <tr><td>Journal Publications Website</td><td>Akwa Ibom State University</td><td>2019 – 2021</td></tr>
+              <tr><td>Student Dues Payment Platform</td><td>University of Uyo</td><td>2016 – 2020</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="reveal spaced">
+          <h3>Other projects</h3>
+          <ul class="check-list">
+            <li><strong>Journal publications website</strong> — UI designed in Figma, plus a web app for journal verifications and publications (Akwa Ibom State University).</li>
+            <li><strong>Online crime mapping system</strong> — shows reported crimes on a map around the user's current location, built with PHP, JavaScript and the Google Maps API.</li>
+            <li><strong>Hostel allocation system</strong> — automatically allocates room spaces to students, built with Python and JavaScript.</li>
+            <li><strong>E-procurement system</strong> — handles contracts with automatic document verification and Paystack payments.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Project details modal (filled by projects.js) -->
+  <div class="modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" type="button" aria-label="Close details">&times;</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <section>
+          <h3>Ifeanyi Elenwo</h3>
+          <p>Also known as Kelvin Sydney. Software Engineer (Full-Stack / AI &amp; Automation). B.Eng Computer Engineering, University of Uyo.</p>
+        </section>
+        <nav aria-label="Footer navigation">
+          <h3>Pages</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html">Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <section>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/kelvin-sydney" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="mailto:kelenwo68@gmail.com">kelenwo68@gmail.com</a></li>
+            <li><a href="tel:+2348161718348">+234 816 171 8348</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> Ifeanyi Elenwo. All rights reserved.</p>
+        <p>Built with HTML, CSS &amp; JavaScript.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" type="button" aria-label="Back to top">&uarr;</button>
+  <script src="js/main.js"></script>
+  <script src="js/projects.js"></script>
+</body>
+</html>
